@@ -15,4 +15,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "tinkoff-kotea"
 
-include(":core", ":android", ":logging", "samples:android:classic-view")
+include(
+        ":core",
+        ":android",
+        ":logging",
+        ":samples:android:classic-view",
+        ":samples:android:compose"
+)
