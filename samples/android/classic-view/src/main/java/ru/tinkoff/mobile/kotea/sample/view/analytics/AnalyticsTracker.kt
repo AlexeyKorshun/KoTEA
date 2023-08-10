@@ -1,13 +1,13 @@
-package ru.tinkoff.mobile.kotea.sample.analytics
+package ru.tinkoff.mobile.kotea.sample.view.analytics
 
 import android.util.Log
-import ru.tinkoff.mobile.kotea.sample.CounterEvent
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterCommandsResultEvent.CounterTick
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterUiEvent
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterUiEvent.ResetClicked
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterUiEvent.StartClicked
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterUiEvent.StopClicked
-import ru.tinkoff.mobile.kotea.sample.CounterState
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterCommandsResultEvent.CounterTick
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent.ResetClicked
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent.StartClicked
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent.StopClicked
+import ru.tinkoff.mobile.kotea.sample.view.CounterState
 
 class AnalyticsTracker {
 

@@ -1,8 +1,8 @@
-package ru.tinkoff.mobile.kotea.sample
+package ru.tinkoff.mobile.kotea.sample.view
 
 import ru.tinkoff.kotea.core.Store
 import ru.tinkoff.kotea.logging.KoteaLoggingStore
-import ru.tinkoff.mobile.kotea.sample.analytics.AnalyticsTracker
+import ru.tinkoff.mobile.kotea.sample.view.analytics.AnalyticsTracker
 
 class CounterStore : Store<CounterState, CounterEvent, CounterNews> by KoteaLoggingStore(
     initialState = CounterState(count = 0, isProgress = false),

@@ -1,7 +1,8 @@
-package ru.tinkoff.mobile.kotea.sample
+package ru.tinkoff.mobile.kotea.sample.view
 
 import ru.tinkoff.kotea.android.ui.ResourcesProvider
 import ru.tinkoff.kotea.android.ui.UiStateMapper
+import ru.tinkoff.mobile.kotea.sample.R
 
 class CounterUiStateMapper : UiStateMapper<CounterState, CounterUiState> {
 

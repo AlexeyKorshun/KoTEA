@@ -1,4 +1,4 @@
-package ru.tinkoff.mobile.kotea.sample
+package ru.tinkoff.mobile.kotea.sample.view
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import ru.tinkoff.kotea.android.lifecycle.collectOnCreate
 import ru.tinkoff.kotea.android.storeViaViewModel
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterUiEvent
 import ru.tinkoff.mobile.kotea.sample.databinding.ActivityMainBinding
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent
 
 class MainActivity : AppCompatActivity() {
 

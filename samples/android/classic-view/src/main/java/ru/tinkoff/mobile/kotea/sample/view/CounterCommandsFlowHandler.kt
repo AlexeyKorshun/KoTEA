@@ -1,4 +1,4 @@
-package ru.tinkoff.mobile.kotea.sample
+package ru.tinkoff.mobile.kotea.sample.view
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import ru.tinkoff.kotea.core.CommandsFlowHandler
-import ru.tinkoff.mobile.kotea.sample.CounterEvent.CounterCommandsResultEvent
+import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterCommandsResultEvent
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class CounterCommandsFlowHandler : CommandsFlowHandler<CounterCommand, CounterCommandsResultEvent> {

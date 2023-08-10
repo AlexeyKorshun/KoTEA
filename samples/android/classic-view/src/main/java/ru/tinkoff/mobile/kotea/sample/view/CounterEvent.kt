@@ -1,4 +1,4 @@
-package ru.tinkoff.mobile.kotea.sample
+package ru.tinkoff.mobile.kotea.sample.view
 
 sealed interface CounterEvent {
 
