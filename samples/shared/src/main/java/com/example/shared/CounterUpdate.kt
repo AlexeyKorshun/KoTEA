@@ -1,9 +1,9 @@
-package ru.tinkoff.mobile.kotea.sample.view
+package com.example.shared
 
+import com.example.shared.CounterEvent.CounterCommandsResultEvent
+import com.example.shared.CounterEvent.CounterUiEvent
+import com.example.shared.analytics.AnalyticsTracker
 import ru.tinkoff.kotea.core.dsl.DslUpdate
-import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterCommandsResultEvent
-import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent
-import ru.tinkoff.mobile.kotea.sample.view.analytics.AnalyticsTracker
 
 class CounterUpdate(
     private val analyticsTracker: AnalyticsTracker,

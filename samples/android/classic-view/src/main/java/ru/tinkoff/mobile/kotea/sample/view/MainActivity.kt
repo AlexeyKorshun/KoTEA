@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.shared.CounterEvent.CounterUiEvent
+import com.example.shared.CounterNews
+import com.example.shared.CounterStore
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import ru.tinkoff.kotea.android.lifecycle.collectOnCreate
 import ru.tinkoff.kotea.android.storeViaViewModel
 import ru.tinkoff.mobile.kotea.sample.databinding.ActivityMainBinding
-import ru.tinkoff.mobile.kotea.sample.view.CounterEvent.CounterUiEvent
 
 class MainActivity : AppCompatActivity() {
 

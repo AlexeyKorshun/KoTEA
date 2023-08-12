@@ -20,5 +20,6 @@ include(
         ":android",
         ":logging",
         ":samples:android:classic-view",
-        ":samples:android:compose"
+        ":samples:android:compose",
+        ":samples:shared"
 )

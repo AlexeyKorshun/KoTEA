@@ -5,7 +5,7 @@ plugins {
 apply from: '../gradle/publish-java.gradle'
 
 dependencies {
-    implementation libs.kotlinx.coroutines.core
+    api libs.kotlinx.coroutines.core
 
     testImplementation libs.test.junit4
     testImplementation libs.test.turbine

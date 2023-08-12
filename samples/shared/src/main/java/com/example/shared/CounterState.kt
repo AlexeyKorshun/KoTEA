@@ -1,4 +1,4 @@
-package ru.tinkoff.mobile.kotea.sample.view
+package com.example.shared
 
 data class CounterState(
     val count: Int,

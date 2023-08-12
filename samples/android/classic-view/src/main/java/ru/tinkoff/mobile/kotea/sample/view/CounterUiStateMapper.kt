@@ -1,5 +1,6 @@
 package ru.tinkoff.mobile.kotea.sample.view
 
+import com.example.shared.CounterState
 import ru.tinkoff.kotea.android.ui.ResourcesProvider
 import ru.tinkoff.kotea.android.ui.UiStateMapper
 import ru.tinkoff.mobile.kotea.sample.R
