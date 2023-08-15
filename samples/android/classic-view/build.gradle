@@ -29,6 +29,7 @@ android {
 
 dependencies {
 
+    implementation(project(":android"))
     implementation(project(":samples:shared"))
 
     implementation libs.androidx.appcompat

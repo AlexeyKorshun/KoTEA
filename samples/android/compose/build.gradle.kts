@@ -49,14 +49,17 @@ android {
 
 dependencies {
 
-    implementation(libs.core.ktx)
+    implementation(project(":android"))
+
+    implementation(project(":samples:shared"))
+    implementation(platform(libs.compose.bom))
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.compose.activity)
-    implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
+    implementation(libs.core.ktx)
 
     debugImplementation(libs.compose.ui.tooling)
     debugImplementation(libs.compose.ui.test.manifest)

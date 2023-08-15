@@ -31,6 +31,5 @@ android {
 }
 
 dependencies {
-    api(project(":android"))
     api(project(":logging"))
 }

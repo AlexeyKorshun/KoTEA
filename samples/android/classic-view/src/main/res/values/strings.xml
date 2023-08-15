@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sample</string>
+    <string name="app_name">Classic View</string>
 
     <string name="counter_title">Counter: %1d</string>
     <string name="counter_started">Started</string>
