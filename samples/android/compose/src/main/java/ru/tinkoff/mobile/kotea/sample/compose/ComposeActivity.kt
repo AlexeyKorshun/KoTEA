@@ -7,7 +7,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement.Center
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -15,7 +17,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.shared.CounterEvent
 import com.example.shared.CounterNews
 import com.example.shared.CounterStore
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -53,7 +58,10 @@ class ComposeActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     CounterScreen(
-                        state = state
+                        state = state,
+                        onStart = { store.dispatch(CounterEvent.CounterUiEvent.StartClicked) },
+                        onStop = { store.dispatch(CounterEvent.CounterUiEvent.StopClicked) },
+                        onReset = { store.dispatch(CounterEvent.CounterUiEvent.ResetClicked) },
                     )
                 }
             }
@@ -68,7 +76,13 @@ class ComposeActivity : ComponentActivity() {
 }
 
 @Composable
-fun CounterScreen(modifier: Modifier = Modifier, state: CounterUiState) {
+fun CounterScreen(
+    modifier: Modifier = Modifier,
+    state: CounterUiState,
+    onStart: () -> Unit,
+    onStop: () -> Unit,
+    onReset: () -> Unit,
+) {
 
     Column(
         modifier = modifier,
@@ -76,19 +90,30 @@ fun CounterScreen(modifier: Modifier = Modifier, state: CounterUiState) {
         verticalArrangement = Center,
     ) {
 
-        Text(text = state.countText)
+        Text(
+            text = state.countText,
+            fontWeight = FontWeight.Bold
+        )
+
+        Spacer(modifier = Modifier.height(4.dp))
 
         Text(text = state.progressText)
 
-        Button(onClick = { /*TODO*/ }) {
+        Spacer(modifier = Modifier.height(4.dp))
+
+        Button(onClick = onStart) {
             Text(text = "Start")
         }
 
-        Button(onClick = { /*TODO*/ }) {
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Button(onClick = onStop) {
             Text(text = "Stop")
         }
 
-        Button(onClick = { /*TODO*/ }) {
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Button(onClick = onReset) {
             Text(text = "Reset")
         }
     }
@@ -102,7 +127,10 @@ fun GreetingPreview() {
             state = CounterUiState(
                 countText = "Count: 0",
                 progressText = "Progress: 0%"
-            )
+            ),
+            onStart = {},
+            onStop = {},
+            onReset = {},
         )
     }
 }
